@@ -31,7 +31,7 @@ int main(void){
 	
 	uint8_t val = 0;						///< Variable to hold value to be displayed.
 	
-	sei();									///< Enable global interrupts.
+	sei();								///< Enable global interrupts.
 	
 	while(1){
 		
@@ -42,10 +42,10 @@ int main(void){
 			val--;
 		}
 		if(val > 255){
-			val = 0;						///< Sets val back to minimum value if it reaches the maximum value.
+			val = 0;					///< Sets val back to minimum value if it reaches the maximum value.
 		}
 		else if(val < 0){
-			val = 255;						///< Sets val to maximum value if it reaches the minimum value.
+			val = 255;					///< Sets val to maximum value if it reaches the minimum value.
 		}
 		
 		PORTA = val;
@@ -67,6 +67,6 @@ void PORT_INIT(void){
  */
 
 void INT_INIT(void){
-	MCUCR |= (1<<ISC00)|(1<<ISC01);		///< A rising edge at INT0 generates an interrupt request.
+	MCUCR |= (1<<ISC00)|(1<<ISC01);					///< A rising edge at INT0 generates an interrupt request.
 	GICR |= (1<<INT0);						///< Enable INT0 external interrupt request.
 }
