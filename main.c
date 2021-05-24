@@ -63,7 +63,7 @@ void PORT_INIT(void){
 }
 
 /*!
- *	@brief Initialize External Interrupt 0 at INT0.
+ *	@brief Initialize External Interrupt 0 at INT0 pin.
  */
 
 void INT_INIT(void){
